@@ -10,15 +10,23 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            TitleView()
-            Spacer()
-            MessageView()
-            Spacer()
-            Spacer()
+        ZStack{
+            BackgroundView()
+            
+            VStack(alignment: .leading) {
+                
+                TitleView()
+                
+                Spacer()
+                
+                MessageView()
+                
+                Spacer()
+                
+                Spacer()
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
