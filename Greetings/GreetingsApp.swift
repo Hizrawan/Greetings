@@ -2,7 +2,7 @@
 //  GreetingsApp.swift
 //  Greetings
 //
-//  Created by macminim1 on 2026/2/25.
+//  Created by Oka on 2026/2/25.
 //
 
 import SwiftUI

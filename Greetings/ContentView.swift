@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct DataItemModel{
-    let text:String
-    let color:Color
-}
-
 struct ContentView: View {
     let messages:[DataItemModel] = [
         .init(text: "Hi everyone,", color: .green),
@@ -29,6 +24,8 @@ struct ContentView: View {
             TextView(text: messages[2].text, color: messages[2].color)
             TextView(text: messages[3].text, color: messages[3].color)
             TextView(text: messages[4].text, color: messages[4].color)
+            
+            
             
         }
     }
