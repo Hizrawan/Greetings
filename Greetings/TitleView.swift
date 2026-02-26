@@ -27,8 +27,8 @@ struct TitleView:View{
             angle: .zero
         )
     }
-    @State private var subtitle = "This app is for learning SwiftUI"
-    let subtitles = [
+    @State private var subtitle:LocalizedStringKey = "This app is for learning SwiftUI"
+    let subtitles:[LocalizedStringKey] = [
         "This app is for learning SwiftUI",
         "Learning iOS Development for fun !!",
         "I hope i got a job as an iOS developer job soon",
@@ -46,7 +46,7 @@ struct TitleView:View{
                     .fontWeight(.thin)
             }
             .onTapGesture {
-                subtitle = subtitles.randomElement() ?? "Hello"
+                subtitle = subtitles.randomElement() ?? LocalizedStringKey("Hello")
             }
             Spacer()
             Circle()
