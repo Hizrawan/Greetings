@@ -13,11 +13,11 @@ struct TextView: View {
     @State var color:Color
     
     let colors:[Color]=[
-        .green,
-        .red,
-        .blue,
-        .purple,
-        .yellow,
+        .myGreen,
+        .myRed,
+        .myBlue,
+        .myPurple,
+        .myYellow,
         .orange,
         .pink,
         Color(red: 0.5, green: 0, blue: 0.6),
@@ -40,7 +40,7 @@ struct TextView: View {
                 y: 10
             )
             .onTapGesture {
-                    color = colors.randomElement() ?? .red
+                    color = colors.randomElement() ?? .myRed
             }
     }
 }
