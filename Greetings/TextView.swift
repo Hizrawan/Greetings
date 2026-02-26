@@ -40,10 +40,7 @@ struct TextView: View {
                 y: 10
             )
             .onTapGesture {
-                withAnimation{
                     color = colors.randomElement() ?? .red
-                }
-                
             }
     }
 }

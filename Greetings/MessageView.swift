@@ -16,8 +16,14 @@ struct MessageView: View {
         .init(text: "Nice to meet you all !!", color: .purple)
     ]
     var body: some View {
-        ForEach(messages) { dataItem in
-            TextView(text: dataItem.text, color: dataItem.color)
+        VStack(alignment: .leading){
+            ForEach(messages) { dataItem in
+                TextView(text: dataItem.text, color: dataItem.color)
+            }
         }
+        
     }
+}
+#Preview {
+    MessageView()
 }
