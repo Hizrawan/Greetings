@@ -27,16 +27,26 @@ struct TitleView:View{
             angle: .zero
         )
     }
-    
+    @State private var subtitle = "This app is for learning SwiftUI"
+    let subtitles = [
+        "This app is for learning SwiftUI",
+        "Learning iOS Development for fun !!",
+        "I hope i got a job as an iOS developer job soon",
+        "Learning swift is so fun",
+        "Lets learn together!!"
+    ]
     var body: some View {
         HStack{
             VStack(alignment: .leading,spacing: 0){
                 Text("Greetings")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                Text("This app is for learning SwiftUI")
+                Text(subtitle)
                     .font(.headline)
                     .fontWeight(.thin)
+            }
+            .onTapGesture {
+                subtitle = subtitles.randomElement() ?? "Hello"
             }
             Spacer()
             Circle()
